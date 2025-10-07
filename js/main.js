@@ -52,7 +52,7 @@ class Portfolio {
 
     initializeApp() {
         console.log('%c🚀 Portfolio Initialized!', 'font-size: 20px; color: #667eea; font-weight: bold;');
-        console.log('%c💻 Desenvolvido com JavaScript ES6+ Modular', 'font-size: 14px; color: #764ba2;');
+        console.log('%c💻 Developed with Modular JavaScript ES6+', 'font-size: 14px; color: #764ba2;');
         
         // Inicializar componentes básicos
         this.initBasicComponents();
@@ -212,8 +212,8 @@ class Portfolio {
     activateRainbowMode() {
         document.body.style.animation = 'rainbow 2s infinite';
         
-        // Criar alerta customizado
-        this.showCustomAlert('🎉 Código Konami Ativado! 🎮', 'Você é incrível!');
+        // Create custom alert
+        this.showCustomAlert('🎉 Konami Code Activated! 🎮', 'You are awesome!');
         
         // Adicionar style se não existir
         if (!document.getElementById('rainbow-style')) {
@@ -228,7 +228,7 @@ class Portfolio {
             document.head.appendChild(style);
         }
         
-        // Desativar após 5 segundos
+        // Deactivate after 5 seconds
         setTimeout(() => {
             document.body.style.animation = '';
         }, 5000);
@@ -264,26 +264,26 @@ class Portfolio {
     }
 
     /**
-     * Mensagens criativas no console
+     * Creative console messages
      */
     logCreativeMessages() {
-        console.log('%c✨ Explore as interações!', 'font-size: 14px; color: #f093fb;');
-        console.log('%c🎯 Tente o Código Konami: ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️BA', 'font-size: 12px; color: #a0a0b8;');
+        console.log('%c✨ Explore the interactions!', 'font-size: 14px; color: #f093fb;');
+        console.log('%c🎯 Try the Konami Code: ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️BA', 'font-size: 12px; color: #a0a0b8;');
         console.log(' ');
-        console.log('%cDesenvolvido por Eduardo Wanderley', 'font-size: 12px; font-weight: bold;');
+        console.log('%cDeveloped by Eduardo Wanderley', 'font-size: 12px; font-weight: bold;');
         console.log('%cGitHub: @eduardowanderleyde', 'font-size: 11px; color: #667eea;');
     }
 
     /**
-     * Evento de página carregada
+     * Page loaded event
      */
     onPageLoad() {
         window.addEventListener('load', () => {
-            console.log('%c✅ Página totalmente carregada!', 'font-size: 16px; color: #4ade80; font-weight: bold;');
+            console.log('%c✅ Page fully loaded!', 'font-size: 16px; color: #4ade80; font-weight: bold;');
             
             document.body.classList.add('loaded');
             
-            // Emitir evento customizado
+            // Emit custom event
             const event = new CustomEvent('portfolioLoaded', {
                 detail: {
                     components: this.components,
@@ -295,7 +295,7 @@ class Portfolio {
     }
 
     /**
-     * Métodos públicos para acesso aos componentes
+     * Public methods for component access
      */
     getComponent(name) {
         return this.components[name];
@@ -306,10 +306,10 @@ class Portfolio {
     }
 }
 
-// Inicializar aplicação
+// Initialize application
 const app = new Portfolio();
 
-// Exportar para uso global (opcional)
+// Export for global use (optional)
 window.Portfolio = app;
 
 export default Portfolio;

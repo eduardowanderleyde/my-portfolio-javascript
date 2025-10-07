@@ -1,78 +1,78 @@
-# 🚀 Eduardo Wanderley - Portfolio Interativo
+# 🚀 Eduardo Wanderley - Interactive Portfolio
 
-Portfolio moderno e interativo construído com arquitetura modular em JavaScript vanilla, CSS modular e HTML semântico.
+Modern and interactive portfolio built with modular JavaScript vanilla architecture, modular CSS, and semantic HTML.
 
-## 👨‍💻 Sobre
+## 👨‍💻 About
 
-Eduardo Wanderley - Web Developer, Engenheiro Mecatrônico e Pesquisador em Robótica & IA  
-Mestre em Ciência da Computação - CIn/UFPE  
-Recife, Pernambuco, Brasil 🇧🇷
+Eduardo Wanderley - Web Developer, Mechatronics Engineer, and Robotics & AI Researcher  
+Master's in Computer Science - CIn/UFPE  
+Recife, Pernambuco, Brazil 🇧🇷
 
-## 🏗️ Arquitetura do Projeto
+## 🏗️ Project Architecture
 
 ```
 javascript/
-├── index.html              # Estrutura HTML semântica
-├── css/                    # Estilos modulares
-│   ├── base.css           # Reset, variáveis, tipografia
-│   ├── components.css     # Componentes reutilizáveis
-│   ├── layout.css         # Layout e seções
-│   └── animations.css     # Animações e transições
-├── js/                     # JavaScript modular (ES6+)
-│   ├── main.js            # Inicializador principal
-│   ├── data/              # Dados da aplicação
-│   │   └── portfolio.js   # Dados de projetos, skills, etc.
-│   ├── components/        # Componentes JS
-│   │   ├── cursor.js      # Cursor personalizado
-│   │   ├── theme.js       # Toggle tema claro/escuro
-│   │   ├── navigation.js  # Navegação e scroll
-│   │   ├── typing.js      # Efeito de digitação
-│   │   ├── projects.js    # Renderização de projetos
-│   │   ├── skills.js      # Renderização de skills
-│   │   └── contact.js     # Formulário de contato
-│   └── utils/             # Utilitários
+├── index.html              # Semantic HTML structure
+├── css/                    # Modular styles
+│   ├── base.css           # Reset, variables, typography
+│   ├── components.css     # Reusable components
+│   ├── layout.css         # Layout and sections
+│   └── animations.css     # Animations and transitions
+├── js/                     # Modular JavaScript (ES6+)
+│   ├── main.js            # Main initializer
+│   ├── data/              # Application data
+│   │   └── portfolio.js   # Projects, skills, etc.
+│   ├── components/        # JS Components
+│   │   ├── cursor.js      # Custom cursor
+│   │   ├── theme.js       # Light/dark theme toggle
+│   │   ├── navigation.js  # Navigation and scroll
+│   │   ├── typing.js      # Typing effect
+│   │   ├── projects.js    # Projects rendering
+│   │   ├── skills.js      # Skills rendering
+│   │   └── contact.js     # Contact form
+│   └── utils/             # Utilities
 │       ├── scroll.js      # Scroll animations observer
-│       └── effects.js     # Efeitos visuais (ripple, magnetic)
-├── assets/                 # Recursos estáticos
-└── .gitignore             # Arquivos ignorados
+│       └── effects.js     # Visual effects (ripple, magnetic)
+├── assets/                 # Static resources
+└── .gitignore             # Ignored files
 ```
 
 ## ✨ Features
 
-### 🎨 Interações Visuais
-- **Cursor Personalizado**: Animado com delay suave
-- **Tema Claro/Escuro**: Persistente com localStorage
-- **Efeitos nos Botões**: Magnético, ripple e shine
-- **Cards 3D**: Inclinação baseada no mouse
-- **Parallax**: Efeito de profundidade no hero
+### 🎨 Visual Interactions
+- **Custom Cursor**: Animated with smooth delay
+- **Light/Dark Theme**: Persistent with localStorage
+- **Button Effects**: Magnetic, ripple, and shine
+- **3D Cards**: Mouse-based tilt
+- **Parallax**: Depth effect on hero
 
-### 🔧 Componentes Modulares
-- Sistema de componentes reutilizáveis
-- Dados centralizados e fáceis de atualizar
-- Renderização dinâmica de conteúdo
-- Arquitetura escalável
+### 🔧 Modular Components
+- Reusable component system
+- Centralized and easy-to-update data
+- Dynamic content rendering
+- Scalable architecture
 
-### 📱 Responsivo e Acessível
+### 📱 Responsive and Accessible
 - Mobile-first design
-- Semântica HTML5
+- HTML5 semantics
 - ARIA labels
-- Performance otimizada
+- Optimized performance
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-1. **Clone o repositório**
+1. **Clone the repository**
 ```bash
-git clone https://github.com/eduardowanderleyde/portfolio.git
+git clone https://github.com/eduardowanderleyde/my-portfolio-javascript.git
 ```
 
-2. **Abra o projeto**
+2. **Open the project**
 ```bash
-cd portfolio
+cd my-portfolio-javascript
 ```
 
-3. **Execute localmente**
-- Abra `index.html` no navegador
-- Ou use um servidor local:
+3. **Run locally**
+- Open `index.html` in your browser
+- Or use a local server:
 ```bash
 # Python
 python -m http.server 8000
@@ -81,40 +81,40 @@ python -m http.server 8000
 npx http-server
 ```
 
-## 🎯 Deploy no GitHub Pages
+## 🎯 Deploy to GitHub Pages
 
 ```bash
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/eduardowanderleyde/portfolio.git
+git remote add origin https://github.com/eduardowanderleyde/my-portfolio-javascript.git
 git push -u origin main
 ```
 
 Configure GitHub Pages:
-1. Vá em Settings → Pages
+1. Go to Settings → Pages
 2. Source: Deploy from branch
 3. Branch: main / (root)
 4. Save
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-- **HTML5**: Estrutura semântica
+- **HTML5**: Semantic structure
 - **CSS3**: Grid, Flexbox, Custom Properties, Animations
 - **JavaScript ES6+**: Modules, Classes, Async/Await
-- **Git**: Controle de versão
+- **Git**: Version control
 
-## 📝 Personalização
+## 📝 Customization
 
-### Atualizar Dados
-Edite `js/data/portfolio.js` para modificar:
-- Projetos
-- Habilidades
-- Informações de contato
-- Textos do hero
+### Update Data
+Edit `js/data/portfolio.js` to modify:
+- Projects
+- Skills
+- Contact information
+- Hero texts
 
-### Cores
-Modifique as variáveis CSS em `css/base.css`:
+### Colors
+Modify CSS variables in `css/base.css`:
 ```css
 :root {
     --primary-color: #667eea;
@@ -123,16 +123,16 @@ Modifique as variáveis CSS em `css/base.css`:
 }
 ```
 
-## 📄 Licença
+## 📄 License
 
-MIT License - Livre para uso pessoal e comercial
+MIT License - Free for personal and commercial use
 
-## 📞 Contato
+## 📞 Contact
 
 - **Email**: wanderley.eduardo@gmail.com
 - **GitHub**: [@eduardowanderleyde](https://github.com/eduardowanderleyde)
-- **Lattes**: [Ver perfil](http://lattes.cnpq.br/seu-lattes)
+- **Lattes**: [View profile](http://lattes.cnpq.br/seu-lattes)
 
 ---
 
-**Desenvolvido com ❤️ por Eduardo Wanderley**
+**Developed with ❤️ by Eduardo Wanderley**

@@ -99,22 +99,22 @@ export class Contact {
         });
         
         if (!isValid) {
-            this.showMessage('Por favor, preencha todos os campos corretamente.', 'error');
+            this.showMessage('Please fill in all fields correctly.', 'error');
             return;
         }
         
-        // Simular envio
-        submitBtn.innerHTML = '<span class="loading"></span> Enviando...';
+        // Simulate sending
+        submitBtn.innerHTML = '<span class="loading"></span> Sending...';
         submitBtn.style.pointerEvents = 'none';
         
         try {
-            // Aqui você pode adicionar a lógica de envio real
+            // Here you can add the actual sending logic
             await this.sendEmail();
             
-            submitBtn.innerHTML = '✓ Enviado!';
+            submitBtn.innerHTML = '✓ Sent!';
             submitBtn.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
             
-            this.showMessage('Mensagem enviada com sucesso!', 'success');
+            this.showMessage('Message sent successfully!', 'success');
             
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
@@ -126,17 +126,17 @@ export class Contact {
         } catch (error) {
             submitBtn.innerHTML = originalText;
             submitBtn.style.pointerEvents = '';
-            this.showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
+            this.showMessage('Error sending message. Please try again.', 'error');
         }
     }
 
     async sendEmail() {
-        // Simular delay de envio
+        // Simulate sending delay
         return new Promise((resolve) => {
             setTimeout(resolve, 1500);
         });
         
-        // Em produção, você faria algo como:
+        // In production, you would do something like:
         /*
         const formData = new FormData(this.form);
         const response = await fetch('/api/contact', {

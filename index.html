@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eduardo Wanderley - Web Developer, Engenheiro Mecatrônico, Pesquisador em Robótica e IA. Mestre em Ciência da Computação pela UFPE.">
-    <meta name="keywords" content="Eduardo Wanderley, Ruby on Rails, Web Developer, Robótica, IA, UFPE, Recife">
+    <meta name="description" content="Eduardo Wanderley - Web Developer, Mechatronics Engineer, Robotics & AI Researcher. Master's in Computer Science from UFPE.">
+    <meta name="keywords" content="Eduardo Wanderley, Ruby on Rails, Web Developer, Robotics, AI, UFPE, Recife, Brazil">
     <meta name="author" content="Eduardo Wanderley">
     <title>Eduardo Wanderley - Web Developer & Robotics Researcher</title>
     
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Cursor personalizado -->
+    <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
@@ -24,12 +24,12 @@
         <nav class="nav">
             <div class="logo">Eduardo<span class="logo-dot">.</span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Início</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <span class="sun">☀️</span>
                 <span class="moon">🌙</span>
             </button>
@@ -42,22 +42,22 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Olá, eu sou <span class="gradient-text">Eduardo Wanderley</span>
+                    Hello, I'm <span class="gradient-text">Eduardo Wanderley</span>
                 </h1>
                 <h2 class="hero-typing">
                     <span class="typing-text"></span>
                 </h2>
-                <p class="hero-subtitle">Ruby on Rails Developer | Engenheiro Mecatrônico | Pesquisador em Robótica & IA</p>
+                <p class="hero-subtitle">Ruby on Rails Developer | Mechatronics Engineer | Robotics & AI Researcher</p>
                 <p class="hero-description">
-                    Mestre em Ciência da Computação | CIn - UFPE | Recife, Brasil 🇧🇷
+                    Master's in Computer Science | CIn - UFPE | Recife, Brazil 🇧🇷
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projetos" class="btn btn-primary magnetic-btn">
-                        Ver Projetos
+                    <a href="#projects" class="btn btn-primary magnetic-btn">
+                        View Projects
                         <span class="btn-shine"></span>
                     </a>
-                    <a href="#contato" class="btn btn-secondary ripple-btn">
-                        Entrar em Contato
+                    <a href="#contact" class="btn btn-secondary ripple-btn">
+                        Get in Touch
                     </a>
                 </div>
             </div>
@@ -69,39 +69,39 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projetos" class="projects">
+        <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title" data-scroll>Meus Projetos</h2>
+                <h2 class="section-title" data-scroll>My Projects</h2>
                 <div class="projects-grid" id="projectsGrid">
-                    <!-- Projetos serão carregados dinamicamente -->
+                    <!-- Projects will be loaded dynamically -->
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="habilidades" class="skills">
+        <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title" data-scroll>Habilidades</h2>
+                <h2 class="section-title" data-scroll>Skills</h2>
                 <div class="skills-grid" id="skillsGrid">
-                    <!-- Habilidades serão carregadas dinamicamente -->
+                    <!-- Skills will be loaded dynamically -->
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contato" class="contact">
+        <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title" data-scroll>Entre em Contato</h2>
+                <h2 class="section-title" data-scroll>Get in Touch</h2>
                 
                 <div class="contact-content" data-scroll>
                     <div class="contact-info" id="contactInfo">
-                        <!-- Informações de contato carregadas dinamicamente -->
+                        <!-- Contact information loaded dynamically -->
                     </div>
                     
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <input type="text" id="name" class="form-input" required>
-                            <label for="name" class="form-label">Nome</label>
+                            <label for="name" class="form-label">Name</label>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" class="form-input" required>
@@ -109,10 +109,10 @@
                         </div>
                         <div class="form-group">
                             <textarea id="message" class="form-input" rows="5" required></textarea>
-                            <label for="message" class="form-label">Mensagem</label>
+                            <label for="message" class="form-label">Message</label>
                         </div>
                         <button type="submit" class="btn btn-primary submit-btn">
-                            Enviar Mensagem
+                            Send Message
                             <span class="btn-shine"></span>
                         </button>
                     </form>
@@ -122,12 +122,12 @@
     </main>
 
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Eduardo Wanderley. Feito com ❤️ e muito JavaScript!</p>
+            <p>&copy; 2025 Eduardo Wanderley. Made with ❤️ and lots of JavaScript!</p>
             <div class="footer-links">
                 <a href="https://github.com/eduardowanderleyde" target="_blank" rel="noopener">GitHub</a>
                 <a href="mailto:wanderley.eduardo@gmail.com">Email</a>
@@ -136,7 +136,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Modular -->
+    <!-- Modular JavaScript -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

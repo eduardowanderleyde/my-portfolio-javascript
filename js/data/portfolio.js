@@ -1,34 +1,34 @@
 /**
  * PORTFOLIO DATA
- * Centralizando todos os dados do portfólio para fácil manutenção
+ * Centralizing all portfolio data for easy maintenance
  */
 
 export const portfolioData = {
-    // Informações Pessoais
+    // Personal Information
     personal: {
         name: 'Eduardo Wanderley',
         title: 'Web Developer & Robotics Researcher',
-        location: 'Recife, Pernambuco, Brasil',
+        location: 'Recife, Pernambuco, Brazil',
         university: 'CIn - UFPE',
-        degree: 'Mestre em Ciência da Computação',
-        description: 'Ruby on Rails Developer | Engenheiro Mecatrônico | Pesquisador em Robótica & IA'
+        degree: 'Master\'s in Computer Science',
+        description: 'Ruby on Rails Developer | Mechatronics Engineer | Robotics & AI Researcher'
     },
 
-    // Palavras para o efeito de digitação
+    // Words for typing effect
     typingWords: [
         'Ruby on Rails Developer',
-        'Engenheiro Mecatrônico',
-        'Pesquisador em IA',
+        'Mechatronics Engineer',
+        'AI Researcher',
         'Web Developer'
     ],
 
-    // Projetos
+    // Projects
     projects: [
         {
             id: 1,
             emoji: '🐕',
             title: 'Dog Social Media',
-            description: 'Rede social para cachorros construída com Ruby on Rails',
+            description: 'Social network for dogs built with Ruby on Rails',
             tags: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
@@ -37,7 +37,7 @@ export const portfolioData = {
             id: 2,
             emoji: '📸',
             title: 'Instagram Clone',
-            description: 'Clone do Instagram desenvolvido com Ruby on Rails',
+            description: 'Instagram clone developed with Ruby on Rails',
             tags: ['Ruby on Rails', 'ActiveStorage', 'API'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
@@ -46,7 +46,7 @@ export const portfolioData = {
             id: 3,
             emoji: '🚗',
             title: 'Car Showcase',
-            description: 'Showcase de carros com Next.js 13 e API moderna',
+            description: 'Car showcase with Next.js 13 and modern API',
             tags: ['Next.js 13', 'TypeScript', 'Tailwind'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
@@ -55,7 +55,7 @@ export const portfolioData = {
             id: 4,
             emoji: '📝',
             title: 'Ruby on Rails Blog',
-            description: 'Blog completo sobre desenvolvimento e tecnologia',
+            description: 'Complete blog about development and technology',
             tags: ['Ruby on Rails', 'Markdown', 'SEO'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
@@ -64,7 +64,7 @@ export const portfolioData = {
             id: 5,
             emoji: '🎮',
             title: 'Ping Pong JS',
-            description: 'Jogo clássico de Ping Pong em JavaScript puro',
+            description: 'Classic Ping Pong game in pure JavaScript',
             tags: ['JavaScript', 'Canvas API', 'Game Dev'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
@@ -72,15 +72,15 @@ export const portfolioData = {
         {
             id: 6,
             emoji: '🤖',
-            title: 'Pesquisa em Robótica',
-            description: 'Pesquisa de mestrado em Robótica e Inteligência Artificial',
-            tags: ['Robótica', 'AI/ML', 'Python'],
+            title: 'Robotics Research',
+            description: 'Master\'s research in Robotics and Artificial Intelligence',
+            tags: ['Robotics', 'AI/ML', 'Python'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
         }
     ],
 
-    // Habilidades
+    // Skills
     skills: [
         {
             id: 1,
@@ -97,7 +97,7 @@ export const portfolioData = {
         {
             id: 3,
             icon: '🤖',
-            name: 'Robótica & IA',
+            name: 'Robotics & AI',
             progress: 90
         },
         {
@@ -121,27 +121,27 @@ export const portfolioData = {
         {
             id: 7,
             icon: '🔧',
-            name: 'Engenharia',
+            name: 'Engineering',
             progress: 92
         },
         {
             id: 8,
             icon: '🌍',
-            name: 'Comunicação',
+            name: 'Communication',
             progress: 95
         }
     ],
 
-    // Informações de Contato
+    // Contact Information
     contact: {
         email: 'wanderley.eduardo@gmail.com',
         github: 'https://github.com/eduardowanderleyde',
         lattes: 'http://lattes.cnpq.br/seu-lattes',
-        location: 'Recife, Pernambuco, Brasil',
+        location: 'Recife, Pernambuco, Brazil',
         international: 'Leipzig 🇩🇪 | London 🇬🇧 | Vancouver 🇨🇦 | Recife 🇧🇷'
     },
 
-    // Cards de Informação de Contato
+    // Contact Information Cards
     contactCards: [
         {
             id: 1,
@@ -163,25 +163,24 @@ export const portfolioData = {
             id: 3,
             icon: '🎓',
             title: 'Lattes',
-            content: 'Ver Perfil Acadêmico',
+            content: 'View Academic Profile',
             link: 'http://lattes.cnpq.br/seu-lattes',
             type: 'link'
         },
         {
             id: 4,
             icon: '📍',
-            title: 'Localização',
-            content: 'Recife, Pernambuco, Brasil',
+            title: 'Location',
+            content: 'Recife, Pernambuco, Brazil',
             type: 'text'
         },
         {
             id: 5,
             icon: '🌍',
-            title: 'Experiência Internacional',
+            title: 'International Experience',
             content: 'Leipzig 🇩🇪 | London 🇬🇧 | Vancouver 🇨🇦 | Recife 🇧🇷',
             type: 'text',
             fullWidth: true
         }
     ]
 };
-

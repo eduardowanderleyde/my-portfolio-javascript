@@ -1,12 +1,12 @@
 /**
- * MAIN.JS - Inicializador Principal
- * Orquestra todos os componentes e módulos do portfólio
+ * MAIN.JS - Main Initializer
+ * Orchestrates all portfolio components and modules
  */
 
-// Importar dados
+// Import data
 import { portfolioData } from './data/portfolio.js';
 
-// Importar componentes
+// Import components
 import { CustomCursor } from './components/cursor.js';
 import { ThemeToggle } from './components/theme.js';
 import { Navigation } from './components/navigation.js';
@@ -15,7 +15,7 @@ import { Projects } from './components/projects.js';
 import { Skills } from './components/skills.js';
 import { Contact } from './components/contact.js';
 
-// Importar utilitários
+// Import utilities
 import { 
     ScrollAnimations, 
     initSmoothScroll, 
@@ -33,7 +33,7 @@ import {
 } from './utils/effects.js';
 
 /**
- * Classe principal da aplicação
+ * Main application class
  */
 class Portfolio {
     constructor() {
@@ -42,7 +42,7 @@ class Portfolio {
     }
 
     async init() {
-        // Aguardar DOM estar pronto
+        // Wait for DOM to be ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => this.initializeApp());
         } else {
@@ -54,39 +54,39 @@ class Portfolio {
         console.log('%c🚀 Portfolio Initialized!', 'font-size: 20px; color: #667eea; font-weight: bold;');
         console.log('%c💻 Developed with Modular JavaScript ES6+', 'font-size: 14px; color: #764ba2;');
         
-        // Inicializar componentes básicos
+        // Initialize basic components
         this.initBasicComponents();
         
-        // Renderizar conteúdo dinâmico
+        // Render dynamic content
         this.renderDynamicContent();
         
-        // Inicializar efeitos visuais
+        // Initialize visual effects
         this.initVisualEffects();
         
-        // Inicializar scroll e navegação
+        // Initialize scroll and navigation
         this.initScrollAndNavigation();
         
-        // Easter eggs e extras
+        // Easter eggs and extras
         this.initEasterEggs();
         
-        // Marcar página como carregada
+        // Mark page as loaded
         this.onPageLoad();
     }
 
     /**
-     * Inicializar componentes básicos
+     * Initialize basic components
      */
     initBasicComponents() {
-        // Cursor personalizado
+        // Custom cursor
         this.components.cursor = new CustomCursor();
         
-        // Toggle de tema
+        // Theme toggle
         this.components.theme = new ThemeToggle();
         
-        // Navegação
+        // Navigation
         this.components.navigation = new Navigation();
         
-        // Efeito de digitação
+        // Typing effect
         const typingElement = document.querySelector('.typing-text');
         if (typingElement) {
             this.components.typing = new TypingEffect(
@@ -102,22 +102,22 @@ class Portfolio {
     }
 
     /**
-     * Renderizar conteúdo dinâmico
+     * Render dynamic content
      */
     renderDynamicContent() {
-        // Projetos
+        // Projects
         this.components.projects = new Projects(
             'projectsGrid',
             portfolioData.projects
         );
         
-        // Habilidades
+        // Skills
         this.components.skills = new Skills(
             'skillsGrid',
             portfolioData.skills
         );
         
-        // Contato
+        // Contact
         this.components.contact = new Contact(
             'contactForm',
             'contactInfo',
@@ -126,52 +126,52 @@ class Portfolio {
     }
 
     /**
-     * Inicializar efeitos visuais
+     * Initialize visual effects
      */
     initVisualEffects() {
-        // Efeito ripple nos botões
+        // Ripple effect on buttons
         initRippleEffect('.ripple-btn');
         
-        // Efeito magnético nos botões
+        // Magnetic effect on buttons
         initMagneticEffect('.magnetic-btn');
         
-        // Efeito 3D nos cards (aguardar renderização)
+        // 3D effect on cards (wait for rendering)
         setTimeout(() => {
             init3DCardEffect('.project-card');
         }, 100);
         
-        // Formas flutuantes com parallax
+        // Floating shapes with parallax
         initFloatingShapes();
         
-        // Partículas animadas
+        // Animated particles
         createParticles();
         
-        // Stagger animation nos cards
+        // Stagger animation on cards
         setTimeout(() => {
             staggerAnimation('.project-card', 100);
         }, 100);
     }
 
     /**
-     * Inicializar scroll e navegação
+     * Initialize scroll and navigation
      */
     initScrollAndNavigation() {
-        // Scroll suave
+        // Smooth scroll
         initSmoothScroll();
         
-        // Parallax no hero
+        // Parallax on hero
         initParallax();
         
-        // Header dinâmico ao scroll
+        // Dynamic header on scroll
         initHeaderScroll();
         
-        // Animações ao scroll
+        // Scroll animations
         const scrollAnimations = new ScrollAnimations({
             threshold: 0.2,
             rootMargin: '0px'
         });
         
-        // Observar elementos
+        // Observe elements
         scrollAnimations.observe('[data-scroll]');
         scrollAnimations.observe('.project-card');
         scrollAnimations.observe('.skill-item');
@@ -180,7 +180,7 @@ class Portfolio {
     }
 
     /**
-     * Easter eggs e extras
+     * Easter eggs and extras
      */
     initEasterEggs() {
         // Konami Code
@@ -191,7 +191,7 @@ class Portfolio {
     }
 
     /**
-     * Código Konami
+     * Konami Code
      */
     initKonamiCode() {
         let konamiCode = [];
@@ -215,7 +215,7 @@ class Portfolio {
         // Create custom alert
         this.showCustomAlert('🎉 Konami Code Activated! 🎮', 'You are awesome!');
         
-        // Adicionar style se não existir
+        // Add style if it doesn't exist
         if (!document.getElementById('rainbow-style')) {
             const style = document.createElement('style');
             style.id = 'rainbow-style';
@@ -313,4 +313,3 @@ const app = new Portfolio();
 window.Portfolio = app;
 
 export default Portfolio;
-

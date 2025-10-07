@@ -1,6 +1,6 @@
 /**
  * TYPING EFFECT COMPONENT
- * Efeito de texto sendo digitado
+ * Typing text effect animation
  */
 
 export class TypingEffect {
@@ -11,7 +11,7 @@ export class TypingEffect {
         this.charIndex = 0;
         this.isDeleting = false;
         
-        // Opções
+        // Options
         this.options = {
             typingSpeed: 100,
             deletingSpeed: 50,
@@ -39,14 +39,14 @@ export class TypingEffect {
             this.charIndex++;
         }
         
-        // Palavra completa, iniciar deleção após delay
+        // Complete word, start deleting after delay
         if (!this.isDeleting && this.charIndex === currentWord.length) {
             this.isDeleting = true;
             setTimeout(() => this.type(), this.options.delayBetweenWords);
             return;
         }
         
-        // Palavra deletada, passar para próxima
+        // Word deleted, move to next
         if (this.isDeleting && this.charIndex === 0) {
             this.isDeleting = false;
             this.wordIndex = (this.wordIndex + 1) % this.words.length;
@@ -65,4 +65,3 @@ export class TypingEffect {
         this.type();
     }
 }
-

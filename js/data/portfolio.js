@@ -1,6 +1,6 @@
 /**
  * PORTFOLIO DATA
- * Centralizing all portfolio data for easy maintenance
+ * Centralized portfolio data for easy maintenance
  */
 
 export const portfolioData = {

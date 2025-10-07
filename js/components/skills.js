@@ -1,6 +1,6 @@
 /**
  * SKILLS COMPONENT
- * Renderiza dinamicamente as habilidades
+ * Dynamically renders skills
  */
 
 export class Skills {
@@ -64,4 +64,3 @@ export class Skills {
         return this.skillsData.find(s => s.id === skillId);
     }
 }
-

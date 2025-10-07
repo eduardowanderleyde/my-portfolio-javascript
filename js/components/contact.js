@@ -1,6 +1,6 @@
 /**
  * CONTACT COMPONENT
- * Gerencia formulário de contato e informações
+ * Manages contact form and information
  */
 
 export class Contact {
@@ -13,12 +13,12 @@ export class Contact {
     }
 
     init() {
-        // Renderizar cards de informação
+        // Render information cards
         if (this.contactInfo && this.contactData) {
             this.renderContactInfo();
         }
         
-        // Configurar formulário
+        // Setup form
         if (this.form) {
             this.setupForm();
             this.setupFormValidation();
@@ -88,7 +88,7 @@ export class Contact {
         const submitBtn = this.form.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         
-        // Validar todos os campos
+        // Validate all fields
         const inputs = this.form.querySelectorAll('.form-input');
         let isValid = true;
         
@@ -148,7 +148,7 @@ export class Contact {
     }
 
     showMessage(message, type = 'info') {
-        // Criar notificação
+        // Create notification
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.textContent = message;
@@ -172,4 +172,3 @@ export class Contact {
         }, 3000);
     }
 }
-

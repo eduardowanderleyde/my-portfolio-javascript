@@ -1,9 +1,9 @@
 /**
  * VISUAL EFFECTS UTILITIES
- * Efeitos visuais reutilizáveis (ripple, magnetic, etc)
+ * Reusable visual effects (ripple, magnetic, etc)
  */
 
-// Efeito Ripple
+// Ripple Effect
 export function initRippleEffect(selector = '.ripple-btn') {
     const buttons = document.querySelectorAll(selector);
     
@@ -25,7 +25,7 @@ export function initRippleEffect(selector = '.ripple-btn') {
     });
 }
 
-// Efeito Magnético
+// Magnetic Effect
 export function initMagneticEffect(selector = '.magnetic-btn') {
     const buttons = document.querySelectorAll(selector);
     
@@ -44,7 +44,7 @@ export function initMagneticEffect(selector = '.magnetic-btn') {
     });
 }
 
-// Efeito 3D nos cards
+// 3D Card Effect
 export function init3DCardEffect(selector = '.project-card') {
     const cards = document.querySelectorAll(selector);
     
@@ -69,7 +69,7 @@ export function init3DCardEffect(selector = '.project-card') {
     });
 }
 
-// Animação das formas flutuantes com parallax
+// Floating shapes animation with parallax
 export function initFloatingShapes() {
     const shapes = document.querySelectorAll('.shape');
     
@@ -89,7 +89,7 @@ export function initFloatingShapes() {
     });
 }
 
-// Criar partículas animadas
+// Create animated particles
 export function createParticles() {
     function createParticle() {
         const particle = document.createElement('div');
@@ -118,11 +118,11 @@ export function createParticles() {
         }).onfinish = () => particle.remove();
     }
     
-    // Criar partículas periodicamente
+    // Create particles periodically
     setInterval(createParticle, 300);
 }
 
-// Adicionar efeito de stagger aos cards
+// Add stagger effect to cards
 export function staggerAnimation(selector, delay = 100) {
     const elements = document.querySelectorAll(selector);
     
@@ -130,4 +130,3 @@ export function staggerAnimation(selector, delay = 100) {
         el.style.transitionDelay = `${index * delay}ms`;
     });
 }
-

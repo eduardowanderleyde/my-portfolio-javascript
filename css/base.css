@@ -1,49 +1,49 @@
 /* ==========================================
-   BASE.CSS - Reset, Variáveis e Fundamentos
+   BASE.CSS - Reset, Variables and Fundamentals
    ========================================== */
 
-/* Reset e Box Model */
+/* Reset and Box Model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variáveis CSS (Custom Properties) */
+/* CSS Variables (Custom Properties) */
 :root {
-    /* Cores Principais */
+    /* Main Colors */
     --primary-color: #667eea;
     --secondary-color: #764ba2;
     --accent-color: #f093fb;
     
-    /* Cores de Superfície - Tema Escuro */
+    /* Surface Colors - Dark Theme */
     --bg-color: #0f0f23;
     --surface-color: #1a1a2e;
     --text-color: #ffffff;
     --text-secondary: #a0a0b8;
     
-    /* Cores de Estado */
+    /* State Colors */
     --success-color: #4ade80;
     --error-color: #ef4444;
     
-    /* Gradientes */
+    /* Gradients */
     --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
     
-    /* Sombras */
+    /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
     --shadow-glow: 0 10px 30px rgba(102, 126, 234, 0.4);
     
-    /* Espaçamentos */
+    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     
-    /* Transições */
+    /* Transitions */
     --transition-fast: 0.15s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.6s ease;
@@ -55,7 +55,7 @@
     --radius-full: 50px;
 }
 
-/* Tema Claro */
+/* Light Theme */
 body.light-mode {
     --bg-color: #f5f5f5;
     --surface-color: #ffffff;
@@ -66,7 +66,7 @@ body.light-mode {
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Body e Tipografia Base */
+/* Body and Base Typography */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
@@ -97,19 +97,19 @@ a {
     transition: color var(--transition-base);
 }
 
-/* Listas */
+/* Lists */
 ul, ol {
     list-style: none;
 }
 
-/* Imagens */
+/* Images */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Botões Base */
+/* Base Buttons */
 button {
     font-family: inherit;
     cursor: pointer;
@@ -117,7 +117,7 @@ button {
     background: none;
 }
 
-/* Inputs Base */
+/* Base Inputs */
 input,
 textarea,
 select {
@@ -125,7 +125,7 @@ select {
     font-size: inherit;
 }
 
-/* Utilidades */
+/* Utilities */
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -140,7 +140,7 @@ select {
     display: inline-block;
 }
 
-/* Responsividade - Tipografia */
+/* Responsive - Typography */
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }

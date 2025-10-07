@@ -1,6 +1,6 @@
 /**
  * THEME TOGGLE COMPONENT
- * Gerencia alternância entre tema claro/escuro
+ * Manages light/dark theme switching
  */
 
 export class ThemeToggle {
@@ -13,10 +13,10 @@ export class ThemeToggle {
     }
 
     init() {
-        // Verificar preferência salva
+        // Check saved preference
         this.loadSavedTheme();
         
-        // Adicionar event listener
+        // Add event listener
         if (this.toggleButton) {
             this.toggleButton.addEventListener('click', () => this.toggle());
         }
@@ -33,14 +33,14 @@ export class ThemeToggle {
     toggle() {
         this.body.classList.toggle('light-mode');
         
-        // Salvar preferência
+        // Save preference
         const theme = this.body.classList.contains('light-mode') ? 'light' : 'dark';
         localStorage.setItem(this.storageKey, theme);
         
-        // Animação no botão
+        // Animate button
         this.animateButton();
         
-        // Emitir evento customizado
+        // Emit custom event
         this.dispatchThemeChangeEvent(theme);
     }
 
@@ -65,4 +65,3 @@ export class ThemeToggle {
         return this.body.classList.contains('light-mode') ? 'light' : 'dark';
     }
 }
-

@@ -1,6 +1,6 @@
 /**
  * NAVIGATION COMPONENT
- * Gerencia navegação e scroll to top
+ * Manages navigation and scroll to top
  */
 
 export class Navigation {
@@ -10,13 +10,13 @@ export class Navigation {
     }
 
     init() {
-        // Botão scroll to top
+        // Scroll to top button
         if (this.scrollTopBtn) {
             window.addEventListener('scroll', () => this.handleScroll());
             this.scrollTopBtn.addEventListener('click', () => this.scrollToTop());
         }
         
-        // Destacar link ativo na navegação
+        // Highlight active section
         this.highlightActiveSection();
     }
 
@@ -60,4 +60,3 @@ export class Navigation {
         });
     }
 }
-

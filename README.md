@@ -1,6 +1,6 @@
 # 🚀 Eduardo Wanderley - Interactive Portfolio
 
-Modern and interactive portfolio built with modular JavaScript vanilla architecture, modular CSS, and semantic HTML.
+Modern and interactive portfolio built with modular vanilla JavaScript architecture, modular CSS, and semantic HTML.
 
 ## 👨‍💻 About
 
@@ -11,7 +11,7 @@ Recife, Pernambuco, Brazil 🇧🇷
 ## 🏗️ Project Architecture
 
 ```
-javascript/
+my-portfolio-javascript/
 ├── index.html              # Semantic HTML structure
 ├── css/                    # Modular styles
 │   ├── base.css           # Reset, variables, typography
@@ -33,8 +33,7 @@ javascript/
 │   └── utils/             # Utilities
 │       ├── scroll.js      # Scroll animations observer
 │       └── effects.js     # Visual effects (ripple, magnetic)
-├── assets/                 # Static resources
-└── .gitignore             # Ignored files
+└── README.md              # Documentation
 ```
 
 ## ✨ Features
@@ -60,19 +59,20 @@ javascript/
 
 ## 🚀 How to Use
 
-1. **Clone the repository**
+### 1. Clone the repository
 ```bash
 git clone https://github.com/eduardowanderleyde/my-portfolio-javascript.git
 ```
 
-2. **Open the project**
+### 2. Open the project
 ```bash
 cd my-portfolio-javascript
 ```
 
-3. **Run locally**
+### 3. Run locally
 - Open `index.html` in your browser
 - Or use a local server:
+
 ```bash
 # Python
 python -m http.server 8000
@@ -91,7 +91,7 @@ git remote add origin https://github.com/eduardowanderleyde/my-portfolio-javascr
 git push -u origin main
 ```
 
-Configure GitHub Pages:
+### Configure GitHub Pages:
 1. Go to Settings → Pages
 2. Source: Deploy from branch
 3. Branch: main / (root)
@@ -123,6 +123,61 @@ Modify CSS variables in `css/base.css`:
 }
 ```
 
+## 🎮 Easter Egg
+
+Try the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
+
+## 🧩 Code Quality & Best Practices
+
+### ✅ Implemented Engineering Principles
+
+- **Single Responsibility**: Each module has a single, well-defined purpose
+- **DRY (Don't Repeat Yourself)**: Data centralized, no code duplication
+- **Separation of Concerns**: Clear division between data, logic, and presentation
+- **Encapsulation**: ES6 modules with proper exports/imports
+- **Scalability**: Easy to add new projects, skills, or features
+- **Maintainability**: Clear naming conventions and code documentation
+
+### 📁 Architecture Benefits
+
+1. **Data Layer** (`js/data/`): All content in one place
+2. **Component Layer** (`js/components/`): Reusable, independent components
+3. **Utility Layer** (`js/utils/`): Shared functionality
+4. **Presentation Layer** (`css/`): Modular, organized styles
+
+### 🔄 How to Add New Content
+
+**Add a new project:**
+```javascript
+// In js/data/portfolio.js
+projects: [
+    // ... existing projects
+    {
+        id: 7,
+        emoji: '🎨',
+        title: 'New Project',
+        description: 'Project description',
+        tags: ['Tag1', 'Tag2'],
+        link: 'https://github.com/...',
+        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+    }
+]
+```
+
+**Add a new skill:**
+```javascript
+// In js/data/portfolio.js
+skills: [
+    // ... existing skills
+    {
+        id: 9,
+        icon: '🎯',
+        name: 'New Skill',
+        progress: 85
+    }
+]
+```
+
 ## 📄 License
 
 MIT License - Free for personal and commercial use
@@ -136,3 +191,5 @@ MIT License - Free for personal and commercial use
 ---
 
 **Developed with ❤️ by Eduardo Wanderley**
+
+*Clean code, modular architecture, and modern JavaScript practices*

@@ -1,6 +1,6 @@
 /**
  * CUSTOM CURSOR COMPONENT
- * Cursor personalizado com animação suave
+ * Custom cursor with smooth animation
  */
 
 export class CustomCursor {
@@ -17,20 +17,20 @@ export class CustomCursor {
     }
 
     init() {
-        // Rastrear posição do mouse
+        // Track mouse position
         document.addEventListener('mousemove', (e) => {
             this.mouseX = e.clientX;
             this.mouseY = e.clientY;
             
-            // Atualizar posição do dot imediatamente
+            // Update dot position immediately
             this.cursorDot.style.left = `${this.mouseX}px`;
             this.cursorDot.style.top = `${this.mouseY}px`;
         });
 
-        // Iniciar animação do outline
+        // Start outline animation
         this.animateOutline();
         
-        // Adicionar efeito hover em elementos interativos
+        // Add hover effects on interactive elements
         this.addHoverEffects();
     }
 
@@ -63,4 +63,3 @@ export class CustomCursor {
         });
     }
 }
-

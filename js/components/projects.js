@@ -1,6 +1,6 @@
 /**
  * PROJECTS COMPONENT
- * Renderiza dinamicamente os projetos do portfólio
+ * Dynamically renders portfolio projects
  */
 
 export class Projects {
@@ -34,7 +34,7 @@ export class Projects {
             <div class="project-image" style="background: ${project.gradient};">
                 <div class="project-overlay">
                     <a href="${project.link}" target="_blank" rel="noopener" class="project-btn">
-                        Ver no GitHub
+                        View on GitHub
                     </a>
                 </div>
             </div>
@@ -76,4 +76,3 @@ export class Projects {
         return this.projectsData.find(p => p.id === projectId);
     }
 }
-

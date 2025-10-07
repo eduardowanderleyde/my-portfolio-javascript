@@ -1,6 +1,6 @@
 /**
  * SCROLL UTILITIES
- * Gerencia animações ao scroll usando Intersection Observer
+ * Manages scroll animations using Intersection Observer
  */
 
 export class ScrollAnimations {
@@ -21,7 +21,7 @@ export class ScrollAnimations {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Animar barras de progresso se for um skill-item
+                    // Animate progress bars if it's a skill-item
                     if (entry.target.classList.contains('skill-item')) {
                         this.animateSkillBar(entry.target);
                     }
@@ -56,13 +56,13 @@ export class ScrollAnimations {
     }
 }
 
-// Smooth scroll para links de navegação
+// Smooth scroll for navigation links
 export function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Ignora se for apenas #
+            // Ignore if it's just #
             if (href === '#') return;
             
             e.preventDefault();
@@ -79,7 +79,7 @@ export function initSmoothScroll() {
     });
 }
 
-// Parallax suave para hero section
+// Smooth parallax for hero section
 export function initParallax() {
     const heroContent = document.querySelector('.hero-content');
     
@@ -92,7 +92,7 @@ export function initParallax() {
     });
 }
 
-// Gerenciar header ao scroll
+// Manage header on scroll
 export function initHeaderScroll() {
     const header = document.querySelector('.header');
     
@@ -108,4 +108,3 @@ export function initHeaderScroll() {
         }
     });
 }
-

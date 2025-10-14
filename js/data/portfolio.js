@@ -26,57 +26,57 @@ export const portfolioData = {
     projects: [
         {
             id: 1,
-            emoji: '🐕',
-            title: 'Dog Social Media',
-            description: 'Social network for dogs built with Ruby on Rails',
-            tags: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap'],
-            link: 'https://github.com/eduardowanderleyde',
+            emoji: '🎫',
+            title: 'Bilheteria Cais do Sertão',
+            description: 'Ticket system with FastAPI + HTMX + Tailwind. Authentication, reports and exports.',
+            tags: ['Python', 'FastAPI', 'HTMX', 'Tailwind CSS'],
+            link: 'https://github.com/eduardowanderleyde/bilheteria-cais-sertao',
             gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
             id: 2,
             emoji: '📸',
             title: 'Instagram Clone',
-            description: 'Instagram clone developed with Ruby on Rails',
-            tags: ['Ruby on Rails', 'ActiveStorage', 'API'],
-            link: 'https://github.com/eduardowanderleyde',
+            description: 'Full-featured Instagram clone with Rails + Devise + ActiveStorage. Feed, stories, posts and comments.',
+            tags: ['Ruby on Rails', 'Devise', 'ActiveStorage', 'PostgreSQL'],
+            link: 'https://github.com/eduardowanderleyde/instagram-clone',
             gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
             id: 3,
-            emoji: '🚗',
-            title: 'Car Showcase',
-            description: 'Car showcase with Next.js 13 and modern API',
-            tags: ['Next.js 13', 'TypeScript', 'Tailwind'],
+            emoji: '📡',
+            title: 'Wi-Fi Mesh Testbed',
+            description: 'Raspberry Pi mesh network with Flask + Socket.IO. RSSI data collection and handover analysis.',
+            tags: ['Python', 'Flask', 'Socket.IO', 'Networking', 'IoT'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         },
         {
             id: 4,
-            emoji: '📝',
-            title: 'Ruby on Rails Blog',
-            description: 'Complete blog about development and technology',
-            tags: ['Ruby on Rails', 'Markdown', 'SEO'],
+            emoji: '🤖',
+            title: 'Robotics Research',
+            description: 'Master\'s research in Robotics and Artificial Intelligence at UFPE.',
+            tags: ['Robotics', 'AI/ML', 'Python', 'Research'],
+            link: 'https://github.com/eduardowanderleyde',
+            gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
+        },
+        {
+            id: 5,
+            emoji: '🐕',
+            title: 'Dog Social Network',
+            description: 'Social network for dogs built with Ruby on Rails.',
+            tags: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
         },
         {
-            id: 5,
+            id: 6,
             emoji: '🎮',
-            title: 'Ping Pong JS',
-            description: 'Classic Ping Pong game in pure JavaScript',
+            title: 'Ping Pong Game',
+            description: 'Classic Ping Pong game in pure JavaScript with Canvas API.',
             tags: ['JavaScript', 'Canvas API', 'Game Dev'],
             link: 'https://github.com/eduardowanderleyde',
             gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-        },
-        {
-            id: 6,
-            emoji: '🤖',
-            title: 'Robotics Research',
-            description: 'Master\'s research in Robotics and Artificial Intelligence',
-            tags: ['Robotics', 'AI/ML', 'Python'],
-            link: 'https://github.com/eduardowanderleyde',
-            gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
         }
     ],
 
@@ -90,21 +90,21 @@ export const portfolioData = {
         },
         {
             id: 2,
-            icon: '⚡',
-            name: 'JavaScript',
-            progress: 85
-        },
-        {
-            id: 3,
-            icon: '🤖',
-            name: 'Robotics & AI',
+            icon: '🐍',
+            name: 'Python (FastAPI/Flask)',
             progress: 90
         },
         {
+            id: 3,
+            icon: '⚡',
+            name: 'JavaScript (ES6+)',
+            progress: 85
+        },
+        {
             id: 4,
-            icon: '🐍',
-            name: 'Python',
-            progress: 88
+            icon: '🤖',
+            name: 'Robotics & AI',
+            progress: 90
         },
         {
             id: 5,
@@ -114,21 +114,21 @@ export const portfolioData = {
         },
         {
             id: 6,
-            icon: '⚛️',
-            name: 'React / Next.js',
-            progress: 80
+            icon: '📡',
+            name: 'Networking (Wi-Fi/Mesh)',
+            progress: 88
         },
         {
             id: 7,
-            icon: '🔧',
-            name: 'Engineering',
-            progress: 92
+            icon: '🐳',
+            name: 'DevOps (Docker/Render)',
+            progress: 80
         },
         {
             id: 8,
-            icon: '🌍',
-            name: 'Communication',
-            progress: 95
+            icon: '🔧',
+            name: 'Mechatronics Engineering',
+            progress: 92
         }
     ],
 

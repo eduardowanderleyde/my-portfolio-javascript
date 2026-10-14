@@ -1,195 +1,83 @@
-# 🚀 Eduardo Wanderley - Interactive Portfolio
+# Eduardo Wanderley - Portfolio
 
-Modern and interactive portfolio built with modular vanilla JavaScript architecture, modular CSS, and semantic HTML.
+Personal portfolio of Eduardo Wanderley, AI engineer in Recife, Brazil: LLM agents, robotics and the full stack systems around them. M.Sc. candidate in Computer Science at CIn-UFPE.
 
-## 👨‍💻 About
+Plain HTML, CSS and JavaScript (ES modules). No framework, no build step.
 
-Eduardo Wanderley - Web Developer, Mechatronics Engineer, and Robotics & AI Researcher  
-Master's in Computer Science - CIn/UFPE  
-Recife, Pernambuco, Brazil 🇧🇷
+## Design
 
-## 🏗️ Project Architecture
+The hero is an occupancy-grid map, like the ones SLAM produces, where a recorded robot route is drawn and then replayed 10 times almost exactly on top of it. It shows the real repeatability result of Fleet UI, my Master's research (mean RMSE 3.35 cm). That animation is the one bold element; the rest of the page stays quiet.
+
+- Palette from the map itself: free space, walls and one route color (`css/base.css`)
+- Bricolage Grotesque for headings, Public Sans for text
+- Light and dark themes, following the system until the visitor chooses
+- Respects `prefers-reduced-motion` (the map is drawn in its final state)
+
+## Structure
 
 ```
 my-portfolio-javascript/
-├── index.html              # Semantic HTML structure
-├── css/                    # Modular styles
-│   ├── base.css           # Reset, variables, typography
-│   ├── components.css     # Reusable components
-│   ├── layout.css         # Layout and sections
-│   └── animations.css     # Animations and transitions
-├── js/                     # Modular JavaScript (ES6+)
-│   ├── main.js            # Main initializer
-│   ├── data/              # Application data
-│   │   └── portfolio.js   # Projects, skills, etc.
-│   ├── components/        # JS Components
-│   │   ├── cursor.js      # Custom cursor
-│   │   ├── theme.js       # Light/dark theme toggle
-│   │   ├── navigation.js  # Navigation and scroll
-│   │   ├── typing.js      # Typing effect
-│   │   ├── projects.js    # Projects rendering
-│   │   ├── skills.js      # Skills rendering
-│   │   └── contact.js     # Contact form
-│   └── utils/             # Utilities
-│       ├── scroll.js      # Scroll animations observer
-│       └── effects.js     # Visual effects (ripple, magnetic)
-└── README.md              # Documentation
+├── index.html               # Page structure and hero copy
+├── assets/                  # Photo
+├── css/
+│   ├── base.css             # Tokens (color, type, spacing), reset, typography
+│   ├── layout.css           # Header, hero, sections, footer
+│   ├── components.css       # Buttons, timeline, projects, toolbox, contact
+│   └── animations.css       # Hero load sequence and reduced motion
+└── js/
+    ├── main.js              # Wires data into components
+    ├── data/portfolio.js    # All content: experience, projects, skills, education, contact
+    └── components/
+        ├── trajectory.js    # Hero map animation (canvas)
+        ├── experience.js    # Work timeline
+        ├── projects.js      # Featured project and project list
+        ├── skills.js        # Toolbox
+        ├── contact.js       # Education, publications and contact
+        ├── navigation.js    # Active nav link
+        └── theme.js         # Light/dark toggle
 ```
 
-## ✨ Features
+## Run locally
 
-### 🎨 Visual Interactions
-- **Custom Cursor**: Animated with smooth delay
-- **Light/Dark Theme**: Persistent with localStorage
-- **Button Effects**: Magnetic, ripple, and shine
-- **3D Cards**: Mouse-based tilt
-- **Parallax**: Depth effect on hero
-
-### 🔧 Modular Components
-- Reusable component system
-- Centralized and easy-to-update data
-- Dynamic content rendering
-- Scalable architecture
-
-### 📱 Responsive and Accessible
-- Mobile-first design
-- HTML5 semantics
-- ARIA labels
-- Optimized performance
-
-## 🚀 How to Use
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/eduardowanderleyde/my-portfolio-javascript.git
-```
-
-### 2. Open the project
-```bash
-cd my-portfolio-javascript
-```
-
-### 3. Run locally
-- Open `index.html` in your browser
-- Or use a local server:
+ES modules do not load from `file://`, so serve the folder:
 
 ```bash
-# Python
 python -m http.server 8000
-
-# Node.js (http-server)
-npx http-server
+# or
+npx serve
 ```
 
-## 🎯 Deploy to GitHub Pages
+Then open http://localhost:8000.
 
-```bash
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/eduardowanderleyde/my-portfolio-javascript.git
-git push -u origin main
-```
+## Deploy to GitHub Pages
 
-### Configure GitHub Pages:
-1. Go to Settings → Pages
-2. Source: Deploy from branch
-3. Branch: main / (root)
-4. Save
+Settings → Pages → Deploy from branch → `main` / root.
 
-## 🛠️ Technologies
+## Update content
 
-- **HTML5**: Semantic structure
-- **CSS3**: Grid, Flexbox, Custom Properties, Animations
-- **JavaScript ES6+**: Modules, Classes, Async/Await
-- **Git**: Version control
+Edit `js/data/portfolio.js`. For example, a new project:
 
-## 📝 Customization
-
-### Update Data
-Edit `js/data/portfolio.js` to modify:
-- Projects
-- Skills
-- Contact information
-- Hero texts
-
-### Colors
-Modify CSS variables in `css/base.css`:
-```css
-:root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    /* ... */
-}
-```
-
-## 🎮 Easter Egg
-
-Try the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
-
-## 🧩 Code Quality & Best Practices
-
-### ✅ Implemented Engineering Principles
-
-- **Single Responsibility**: Each module has a single, well-defined purpose
-- **DRY (Don't Repeat Yourself)**: Data centralized, no code duplication
-- **Separation of Concerns**: Clear division between data, logic, and presentation
-- **Encapsulation**: ES6 modules with proper exports/imports
-- **Scalability**: Easy to add new projects, skills, or features
-- **Maintainability**: Clear naming conventions and code documentation
-
-### 📁 Architecture Benefits
-
-1. **Data Layer** (`js/data/`): All content in one place
-2. **Component Layer** (`js/components/`): Reusable, independent components
-3. **Utility Layer** (`js/utils/`): Shared functionality
-4. **Presentation Layer** (`css/`): Modular, organized styles
-
-### 🔄 How to Add New Content
-
-**Add a new project:**
 ```javascript
-// In js/data/portfolio.js
 projects: [
-    // ... existing projects
     {
-        id: 7,
-        emoji: '🎨',
-        title: 'New Project',
-        description: 'Project description',
-        tags: ['Tag1', 'Tag2'],
-        link: 'https://github.com/...',
-        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+        id: 8,
+        title: 'New project',
+        status: 'Live',                 // optional badge
+        description: 'What it does, for whom.',
+        tags: ['Python', 'FastAPI'],
+        link: 'https://example.com',    // optional
+        linkLabel: 'Visit the site'     // optional, defaults to "View project"
     }
 ]
 ```
 
-**Add a new skill:**
-```javascript
-// In js/data/portfolio.js
-skills: [
-    // ... existing skills
-    {
-        id: 9,
-        icon: '🎯',
-        name: 'New Skill',
-        progress: 85
-    }
-]
-```
-
-## 📄 License
-
-MIT License - Free for personal and commercial use
-
-## 📞 Contact
+## Contact
 
 - **Email**: wanderley.eduardo@gmail.com
+- **LinkedIn**: [in/edu-wanderley](https://www.linkedin.com/in/edu-wanderley)
 - **GitHub**: [@eduardowanderleyde](https://github.com/eduardowanderleyde)
-- **Lattes**: [View profile](http://lattes.cnpq.br/seu-lattes)
+- **Lattes**: [lattes.cnpq.br/4068383542057315](https://lattes.cnpq.br/4068383542057315)
 
----
+## License
 
-**Developed with ❤️ by Eduardo Wanderley**
-
-*Clean code, modular architecture, and modern JavaScript practices*
+MIT

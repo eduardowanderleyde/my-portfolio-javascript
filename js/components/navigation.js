@@ -1,62 +1,36 @@
 /**
  * NAVIGATION COMPONENT
- * Manages navigation and scroll to top
+ * Highlights the nav link of the section currently on screen
  */
 
 export class Navigation {
     constructor() {
-        this.scrollTopBtn = document.getElementById('scrollTop');
+        this.links = document.querySelectorAll('.nav-link');
         this.init();
     }
 
     init() {
-        // Scroll to top button
-        if (this.scrollTopBtn) {
-            window.addEventListener('scroll', () => this.handleScroll());
-            this.scrollTopBtn.addEventListener('click', () => this.scrollToTop());
-        }
-        
-        // Highlight active section
-        this.highlightActiveSection();
-    }
+        const sections = [...this.links]
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
 
-    handleScroll() {
-        if (window.pageYOffset > 500) {
-            this.scrollTopBtn.classList.add('visible');
-        } else {
-            this.scrollTopBtn.classList.remove('visible');
-        }
-    }
-
-    scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-
-    highlightActiveSection() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.setActive(entry.target.id);
                 }
             });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+
+        sections.forEach(section => observer.observe(section));
+    }
+
+    setActive(id) {
+        this.links.forEach(link => {
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'true');
+            else link.removeAttribute('aria-current');
         });
     }
 }

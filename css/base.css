@@ -1,150 +1,135 @@
-/* ==========================================
-   BASE.CSS - Reset, Variables and Fundamentals
-   ========================================== */
+/* ==========================================================================
+   BASE - Tokens, reset and typography
+   Palette taken from a SLAM occupancy map: free space, walls, one route color
+   ========================================================================== */
 
-/* Reset and Box Model */
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    --ground: #f2f3ef;      /* free space on the map */
+    --surface: #e7e9e3;     /* figure and raised areas */
+    --ink: #1c2220;         /* text */
+    --muted: #58615d;       /* secondary text */
+    --rule: #cdd2cb;        /* grid lines and dividers */
+    --wall: #2b3330;        /* occupied cells */
+    --accent: #2346c8;      /* the route: links, focus, primary action */
+    --accent-ink: #ffffff;
+
+    --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+
+    --step--1: 0.875rem;
+    --step-0: 1.0625rem;
+    --step-1: 1.25rem;
+    --step-2: 1.75rem;
+    --step-3: clamp(2.75rem, 6.5vw, 5rem);
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.5rem;
+    --space-5: 4rem;
+    --space-6: 7rem;
+
+    --page: 1120px;
+    --gutter: clamp(16px, 4vw, 40px);
+    --radius: 6px;
+
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --ground: #141816;
+        --surface: #1c2120;
+        --ink: #e4e8e4;
+        --muted: #9aa39e;
+        --rule: #2f3633;
+        --wall: #c3cbc6;
+        --accent: #8ea6ff;
+        --accent-ink: #10142a;
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] {
+    --ground: #141816;
+    --surface: #1c2120;
+    --ink: #e4e8e4;
+    --muted: #9aa39e;
+    --rule: #2f3633;
+    --wall: #c3cbc6;
+    --accent: #8ea6ff;
+    --accent-ink: #10142a;
+    color-scheme: dark;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-/* CSS Variables (Custom Properties) */
-:root {
-    /* Main Colors */
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    
-    /* Surface Colors - Dark Theme */
-    --bg-color: #0f0f23;
-    --surface-color: #1a1a2e;
-    --text-color: #ffffff;
-    --text-secondary: #a0a0b8;
-    
-    /* State Colors */
-    --success-color: #4ade80;
-    --error-color: #ef4444;
-    
-    /* Gradients */
-    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-    
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
-    --shadow-glow: 0 10px 30px rgba(102, 126, 234, 0.4);
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.3s ease;
-    --transition-slow: 0.6s ease;
-    
-    /* Border Radius */
-    --radius-sm: 10px;
-    --radius-md: 15px;
-    --radius-lg: 20px;
-    --radius-full: 50px;
+body,
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+    margin: 0;
+    padding: 0;
 }
 
-/* Light Theme */
-body.light-mode {
-    --bg-color: #f5f5f5;
-    --surface-color: #ffffff;
-    --text-color: #1a1a2e;
-    --text-secondary: #666666;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Body and Base Typography */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden;
-    cursor: none;
-    transition: background-color var(--transition-base);
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
-/* Links */
-a {
-    color: inherit;
-    text-decoration: none;
-    transition: color var(--transition-base);
-}
-
-/* Lists */
 ul, ol {
     list-style: none;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: var(--step-1);
+    font-weight: 500;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+}
+
+canvas {
     display: block;
 }
 
-/* Base Buttons */
-button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    background: none;
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
-/* Base Inputs */
-input,
-textarea,
-select {
-    font-family: inherit;
-    font-size: inherit;
+.skip-link {
+    position: absolute;
+    left: var(--gutter);
+    top: -3rem;
+    padding: var(--space-1) var(--space-2);
+    background: var(--accent);
+    color: var(--accent-ink);
+    z-index: 100;
 }
 
-/* Utilities */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
+.skip-link:focus {
+    top: var(--space-1);
 }
-
-.gradient-text {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-}
-
-/* Responsive - Typography */
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.25rem; }
-}
-

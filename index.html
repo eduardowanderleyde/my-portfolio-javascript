@@ -3,137 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eduardo Wanderley - Web Developer, Mechatronics Engineer, Robotics & AI Researcher. Master's in Computer Science from UFPE.">
-    <meta name="keywords" content="Eduardo Wanderley, Ruby on Rails, Web Developer, Robotics, AI, UFPE, Recife, Brazil">
+    <meta name="description" content="Eduardo Wanderley - AI engineer building LLM agents, robotics tooling and the full stack systems around them. M.Sc. candidate in Computer Science at CIn-UFPE, Recife, Brazil.">
+    <meta name="keywords" content="Eduardo Wanderley, AI Engineer, LLM Agents, Claude API, RAG, Software Engineer, Full Stack, Python, FastAPI, React, Next.js, AI Agents, ROS 2, Robotics, UFPE, Recife, Brazil">
     <meta name="author" content="Eduardo Wanderley">
-    <title>Eduardo Wanderley - Web Developer & Robotics Researcher</title>
-    
+    <title>Eduardo Wanderley - AI Engineer</title>
+
+    <!-- Theme is applied before paint to avoid a flash -->
+    <script>
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <!-- Modular CSS -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <a class="skip-link" href="#work">Skip to content</a>
 
     <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav">
-            <div class="logo">Eduardo<span class="logo-dot">.</span></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
+    <header class="header">
+        <nav class="nav" aria-label="Main">
+            <a href="#top" class="logo">Eduardo Wanderley</a>
+            <ul class="nav-links">
+                <li><a href="#work" class="nav-link">Work</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#toolbox" class="nav-link">Toolbox</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <span class="sun">☀️</span>
-                <span class="moon">🌙</span>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9A9 9 0 0 0 12 3Zm0 16V5a7 7 0 0 1 0 14Z" fill="currentColor"/></svg>
             </button>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hello, I'm <span class="gradient-text">Eduardo Wanderley</span>
-                </h1>
-                <h2 class="hero-typing">
-                    <span class="typing-text"></span>
-                </h2>
-                <p class="hero-subtitle">Ruby on Rails Developer | Mechatronics Engineer | Robotics & AI Researcher</p>
-                <p class="hero-description">
-                    Master's in Computer Science | CIn - UFPE | Recife, Brazil 🇧🇷
+    <main id="top">
+        <!-- Hero: the trajectory figure is the one memorable element -->
+        <section class="hero">
+            <div class="hero-text">
+                <img class="hero-photo" src="assets/eduardo.jpg" alt="Eduardo Wanderley" width="88" height="88">
+                <h1 class="hero-name">Eduardo Wanderley</h1>
+                <p class="hero-lead">
+                    AI engineer. I build LLM agents that act in the real world, from robots
+                    following plain-language missions to assistants that answer from company knowledge.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary magnetic-btn">
-                        View Projects
-                        <span class="btn-shine"></span>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary ripple-btn">
-                        Get in Touch
-                    </a>
+                <p class="hero-meta">
+                    6+ years shipping the full stack around them: ERPs, intranets, APIs and data pipelines
+                    in production. Python, FastAPI, React and the Claude and OpenAI APIs.
+                    M.Sc. candidate at CIn-UFPE, based in Recife, Brazil.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="mailto:wanderley.eduardo@gmail.com">Email me</a>
+                    <a class="btn" href="https://github.com/eduardowanderleyde" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn" href="https://www.linkedin.com/in/edu-wanderley" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
+
+            <figure class="hero-figure">
+                <canvas id="trajectoryMap" role="img"
+                        aria-label="Occupancy map of two rooms with one recorded robot route and ten replays drawn almost exactly on top of it"></canvas>
+                <figcaption>
+                    <strong>Fleet UI, my Master's research.</strong>
+                    One recorded route, then 10 autonomous replays in simulation.
+                    Mean deviation from the original path: 3.35&nbsp;cm.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Experience -->
+        <section id="work" class="section">
+            <h2 class="section-title">Work</h2>
+            <ol class="timeline" id="experienceList">
+                <!-- Experience loaded dynamically -->
+            </ol>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <article class="featured" id="featuredProject">
+                <!-- Featured project loaded dynamically -->
+            </article>
+            <ul class="project-list" id="projectList">
+                <!-- Projects loaded dynamically -->
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="toolbox" class="section">
+            <h2 class="section-title">Toolbox</h2>
+            <dl class="toolbox" id="skillsList">
+                <!-- Skills loaded dynamically -->
+            </dl>
+        </section>
+
+        <!-- Education and publications -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education and research</h2>
+            <div class="education-grid">
+                <ul class="education-list" id="educationList"></ul>
+                <div class="publication" id="publicationList"></div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title" data-scroll>My Projects</h2>
-                <div class="projects-grid" id="projectsGrid">
-                    <!-- Projects will be loaded dynamically -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title" data-scroll>Skills</h2>
-                <div class="skills-grid" id="skillsGrid">
-                    <!-- Skills will be loaded dynamically -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title" data-scroll>Get in Touch</h2>
-                
-                <div class="contact-content" data-scroll>
-                    <div class="contact-info" id="contactInfo">
-                        <!-- Contact information loaded dynamically -->
-                    </div>
-                    
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" class="form-input" required>
-                            <label for="name" class="form-label">Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" class="form-input" required>
-                            <label for="email" class="form-label">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" class="form-input" rows="5" required></textarea>
-                            <label for="message" class="form-label">Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            Send Message
-                            <span class="btn-shine"></span>
-                        </button>
-                    </form>
-                </div>
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <h2 class="section-title">Get in touch</h2>
+            <div id="contactContent">
+                <!-- Contact loaded dynamically -->
             </div>
         </section>
     </main>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Eduardo Wanderley. Made with ❤️ and lots of JavaScript!</p>
-            <div class="footer-links">
-                <a href="https://github.com/eduardowanderleyde" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:wanderley.eduardo@gmail.com">Email</a>
-                <a href="http://lattes.cnpq.br/seu-lattes" target="_blank" rel="noopener">Lattes</a>
-            </div>
-        </div>
+        <p>&copy; 2026 Eduardo Wanderley. Built with plain HTML, CSS and JavaScript.</p>
     </footer>
 
     <!-- Modular JavaScript -->

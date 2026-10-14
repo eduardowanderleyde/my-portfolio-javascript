@@ -28,19 +28,20 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <a class="skip-link" href="#work">Skip to content</a>
+    <a class="skip-link" href="#work" data-i18n="skipLink">Skip to content</a>
 
     <!-- Header -->
     <header class="header">
         <nav class="nav" aria-label="Main">
             <a href="#top" class="logo">Eduardo Wanderley</a>
             <ul class="nav-links">
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#toolbox" class="nav-link">Toolbox</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#work" class="nav-link" data-i18n="navWork">Work</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="navProjects">Projects</a></li>
+                <li><a href="#toolbox" class="nav-link" data-i18n="navToolbox">Toolbox</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Ver em português">PT</button>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" data-i18n-aria="themeLabel">
                 <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9A9 9 0 0 0 12 3Zm0 16V5a7 7 0 0 1 0 14Z" fill="currentColor"/></svg>
             </button>
         </nav>
@@ -52,17 +53,18 @@
             <div class="hero-text">
                 <img class="hero-photo" src="assets/eduardo.jpg" alt="Eduardo Wanderley" width="88" height="88">
                 <h1 class="hero-name">Eduardo Wanderley</h1>
-                <p class="hero-lead">
+                <p class="hero-lead" data-i18n="heroLead">
                     AI engineer. I build LLM agents that act in the real world, from robots
                     following plain-language missions to assistants that answer from company knowledge.
                 </p>
-                <p class="hero-meta">
+                <p class="hero-meta" data-i18n="heroMeta">
                     6+ years shipping the full stack around them: ERPs, intranets, APIs and data pipelines
                     in production. Python, FastAPI, React and the Claude and OpenAI APIs.
                     M.Sc. candidate at CIn-UFPE, based in Recife, Brazil.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="mailto:wanderley.eduardo@gmail.com">Email me</a>
+                    <a class="btn btn-primary" href="mailto:wanderley.eduardo@gmail.com" data-i18n="emailMe">Email me</a>
+                    <a class="btn" href="assets/cv/Eduardo-Wanderley-Resume-EN.pdf" download data-i18n="downloadCv" data-i18n-href="cvFile">Download CV</a>
                     <a class="btn" href="https://github.com/eduardowanderleyde" target="_blank" rel="noopener">GitHub</a>
                     <a class="btn" href="https://www.linkedin.com/in/edu-wanderley" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
@@ -70,8 +72,9 @@
 
             <figure class="hero-figure">
                 <canvas id="trajectoryMap" role="img"
-                        aria-label="Occupancy map of two rooms with one recorded robot route and ten replays drawn almost exactly on top of it"></canvas>
-                <figcaption>
+                        aria-label="Occupancy map of two rooms with one recorded robot route and ten replays drawn almost exactly on top of it"
+                        data-i18n-aria="mapLabel"></canvas>
+                <figcaption data-i18n-html="mapCaption">
                     <strong>Fleet UI, my Master's research.</strong>
                     One recorded route, then 10 autonomous replays in simulation.
                     Mean deviation from the original path: 3.35&nbsp;cm.
@@ -81,7 +84,7 @@
 
         <!-- Experience -->
         <section id="work" class="section">
-            <h2 class="section-title">Work</h2>
+            <h2 class="section-title" data-i18n="workTitle">Work</h2>
             <ol class="timeline" id="experienceList">
                 <!-- Experience loaded dynamically -->
             </ol>
@@ -89,7 +92,7 @@
 
         <!-- Projects -->
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
             <article class="featured" id="featuredProject">
                 <!-- Featured project loaded dynamically -->
             </article>
@@ -100,7 +103,7 @@
 
         <!-- Skills -->
         <section id="toolbox" class="section">
-            <h2 class="section-title">Toolbox</h2>
+            <h2 class="section-title" data-i18n="toolboxTitle">Toolbox</h2>
             <dl class="toolbox" id="skillsList">
                 <!-- Skills loaded dynamically -->
             </dl>
@@ -108,7 +111,7 @@
 
         <!-- Education and publications -->
         <section id="education" class="section">
-            <h2 class="section-title">Education and research</h2>
+            <h2 class="section-title" data-i18n="educationTitle">Education and research</h2>
             <div class="education-grid">
                 <ul class="education-list" id="educationList"></ul>
                 <div class="publication" id="publicationList"></div>
@@ -117,7 +120,7 @@
 
         <!-- Contact -->
         <section id="contact" class="section contact">
-            <h2 class="section-title">Get in touch</h2>
+            <h2 class="section-title" data-i18n="contactTitle">Get in touch</h2>
             <div id="contactContent">
                 <!-- Contact loaded dynamically -->
             </div>
@@ -125,7 +128,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Eduardo Wanderley. Built with plain HTML, CSS and JavaScript.</p>
+        <p data-i18n="footer">&copy; 2026 Eduardo Wanderley. Built with plain HTML, CSS and JavaScript.</p>
     </footer>
 
     <!-- Modular JavaScript -->

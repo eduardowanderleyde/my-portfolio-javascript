@@ -1,11 +1,12 @@
 /**
  * MAIN.JS - Main Initializer
- * Renders the portfolio sections from data and starts the hero figure
+ * Renders the portfolio sections in the chosen language and starts the hero figure
  */
 
-import { portfolioData } from './data/portfolio.js';
+import { ui, content } from './data/portfolio.js';
 
 import { ThemeToggle } from './components/theme.js';
+import { LanguageSwitcher } from './components/language.js';
 import { Navigation } from './components/navigation.js';
 import { TrajectoryMap } from './components/trajectory.js';
 import { Experience } from './components/experience.js';
@@ -18,10 +19,19 @@ function initPortfolio() {
     new Navigation();
     new TrajectoryMap('trajectoryMap');
 
-    new Experience('experienceList', portfolioData.experience);
-    new Projects('featuredProject', 'projectList', portfolioData.featured, portfolioData.projects);
-    new Skills('skillsList', portfolioData.skills);
-    new Contact(portfolioData);
+    const experience = new Experience('experienceList');
+    const projects = new Projects('featuredProject', 'projectList');
+    const skills = new Skills('skillsList');
+    const contact = new Contact();
+
+    // Re-render every section whenever the language changes (including on load)
+    new LanguageSwitcher('langToggle', ui, (lang) => {
+        const data = content[lang];
+        experience.render(data.experience);
+        projects.render(data.featured, data.projects, ui[lang]);
+        skills.render(data.skills);
+        contact.render(data, ui[lang]);
+    });
 }
 
 // Module scripts are deferred, so the DOM is already parsed here

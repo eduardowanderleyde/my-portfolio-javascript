@@ -47,6 +47,24 @@
     border-color: var(--ink);
 }
 
+.lang-toggle {
+    height: 2.5rem;
+    min-width: 2.5rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--step--1);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lang-toggle:hover {
+    border-color: var(--ink);
+}
+
 /* Shared: technology line under an entry */
 .stack {
     margin-top: var(--space-1);
@@ -107,6 +125,55 @@
     background: var(--surface);
     border-radius: var(--radius);
     margin-bottom: var(--space-4);
+}
+
+/* Demo video: a static poster until clicked, so YouTube loads only on demand */
+.featured-video {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--wall);
+}
+
+.featured-video iframe,
+.video-poster {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.video-poster {
+    position: relative;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    transition: transform 0.15s ease;
+}
+
+.video-poster:hover .video-play,
+.video-poster:focus-visible .video-play {
+    transform: scale(1.08);
 }
 
 .featured h3 {

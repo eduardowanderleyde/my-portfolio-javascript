@@ -4,20 +4,14 @@
  */
 
 export class Skills {
-    constructor(containerId, skillsData) {
+    constructor(containerId) {
         this.container = document.getElementById(containerId);
-        this.skillsData = skillsData;
-        this.init();
     }
 
-    init() {
-        if (this.container && this.skillsData) {
-            this.render();
-        }
-    }
+    render(skills) {
+        if (!this.container || !skills) return;
 
-    render() {
-        this.container.innerHTML = this.skillsData.map(group => `
+        this.container.innerHTML = skills.map(group => `
             <div>
                 <dt>${group.name}</dt>
                 <dd>${group.items.join(', ')}</dd>

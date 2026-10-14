@@ -4,20 +4,14 @@
  */
 
 export class Experience {
-    constructor(containerId, experience) {
+    constructor(containerId) {
         this.container = document.getElementById(containerId);
-        this.experience = experience;
-        this.init();
     }
 
-    init() {
-        if (this.container && this.experience) {
-            this.render();
-        }
-    }
+    render(experience) {
+        if (!this.container || !experience) return;
 
-    render() {
-        this.container.innerHTML = this.experience.map(job => `
+        this.container.innerHTML = experience.map(job => `
             <li class="timeline-item">
                 <p class="timeline-period">${job.period}</p>
                 <div>

@@ -165,6 +165,13 @@ export const content = {
                 tags: ['Python', 'LangChain', 'FastAPI', 'FAISS', 'PostgreSQL']
             },
             {
+                title: 'Fleet AI',
+                description: 'Companion system to Fleet UI that orchestrates robot-fleet missions written in Portuguese. Uses SimFleet today, with a contract toward TurtleBot4. Features a Control Center, a localhost-only API reached over SSH tunnel, and a planner that can be deterministic or use a local LLM via an OpenAI-compatible adapter (Ollama, qwen2.5:3b).',
+                tags: ['Python', 'Docker Compose', 'SimFleet', 'Ollama'],
+                link: 'https://github.com/eduardowanderleyde/fleet-ai',
+                linkLabel: 'View on GitHub'
+            },
+            {
                 title: 'Engeletra ERP',
                 status: 'In production',
                 description: 'Vertical ERP for industrial electrical maintenance with 10+ modules, used by about 10 people: quotes with per-invoice taxes, work orders, electrical tests, technical reports, billing and finance.',
@@ -179,10 +186,9 @@ export const content = {
             },
             {
                 title: 'Casa Bacurau',
-                status: 'Live',
-                description: 'Website presenting the services and venue of a commercial space, with a responsive interface focused on usability.',
+                description: 'Website presenting the services and venue of a cultural space in Recife, with a responsive interface focused on usability.',
                 tags: ['Web', 'Responsive UI'],
-                link: 'http://casabacurau.com.br/',
+                link: 'https://casabacurau.com.br/',
                 linkLabel: 'Visit the site'
             },
             {
@@ -192,9 +198,11 @@ export const content = {
             },
             {
                 title: 'Acende Pavio store',
-                status: 'Being rebuilt',
-                description: 'Online store with catalog, cart, orders and an admin panel, with Mercado Pago payments and shipping quotes by postal code.',
-                tags: ['E-commerce', 'Mercado Pago']
+                status: 'Coming soon',
+                description: 'Online store with catalog, cart, orders and an admin panel, with Mercado Pago payments and shipping quotes by postal code. Current implementation in Node.js/Express with Prisma and MySQL, hosted on Hostinger.',
+                tags: ['Node.js', 'Express', 'Prisma', 'MySQL'],
+                link: 'https://acendepavio.com',
+                linkLabel: 'Visit the site'
             },
             {
                 title: 'Educational data mining',
@@ -329,6 +337,13 @@ export const content = {
                 tags: ['Python', 'LangChain', 'FastAPI', 'FAISS', 'PostgreSQL']
             },
             {
+                title: 'Fleet AI',
+                description: 'Sistema complementar ao Fleet UI que orquestra missões de frotas de robôs escritas em português. Usa SimFleet atualmente, com contrato para TurtleBot4. Possui um Control Center, uma API acessível apenas via localhost por túnel SSH, e um planejador que pode ser determinístico ou usar um LLM local via adaptador compatível com OpenAI (Ollama, qwen2.5:3b).',
+                tags: ['Python', 'Docker Compose', 'SimFleet', 'Ollama'],
+                link: 'https://github.com/eduardowanderleyde/fleet-ai',
+                linkLabel: 'Ver no GitHub'
+            },
+            {
                 title: 'ERP Engeletra',
                 status: 'Em produção',
                 description: 'ERP vertical para manutenção elétrica industrial com mais de 10 módulos, usado por cerca de 10 pessoas: orçamentos com impostos por nota, ordens de serviço, ensaios elétricos, relatórios técnicos, faturamento e financeiro.',
@@ -343,10 +358,9 @@ export const content = {
             },
             {
                 title: 'Casa Bacurau',
-                status: 'No ar',
-                description: 'Site de apresentação dos serviços e do espaço de um estabelecimento comercial, com interface responsiva focada em usabilidade.',
+                description: 'Site de apresentação dos serviços e do espaço de um espaço cultural em Recife, com interface responsiva focada em usabilidade.',
                 tags: ['Web', 'Interface responsiva'],
-                link: 'http://casabacurau.com.br/',
+                link: 'https://casabacurau.com.br/',
                 linkLabel: 'Visitar o site'
             },
             {
@@ -356,9 +370,11 @@ export const content = {
             },
             {
                 title: 'Loja Acende Pavio',
-                status: 'Em reconstrução',
-                description: 'Loja virtual com catálogo, carrinho, pedidos e painel administrativo, com pagamentos pelo Mercado Pago e cálculo de frete por CEP.',
-                tags: ['E-commerce', 'Mercado Pago']
+                status: 'Em breve',
+                description: 'Loja virtual com catálogo, carrinho, pedidos e painel administrativo, com pagamentos pelo Mercado Pago e cálculo de frete por CEP. Implementação atual em Node.js/Express com Prisma e MySQL, hospedada na Hostinger.',
+                tags: ['Node.js', 'Express', 'Prisma', 'MySQL'],
+                link: 'https://acendepavio.com',
+                linkLabel: 'Visitar o site'
             },
             {
                 title: 'Mineração de dados educacionais',
